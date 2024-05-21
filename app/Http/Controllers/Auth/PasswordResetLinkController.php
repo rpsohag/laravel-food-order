@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Flasher\Prime\FlasherInterface;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
@@ -23,7 +24,7 @@ class PasswordResetLinkController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, FlasherInterface $flasher): RedirectResponse
     {
         $request->validate([
             'email' => ['required', 'email'],
@@ -35,6 +36,8 @@ class PasswordResetLinkController extends Controller
         $status = Password::sendResetLink(
             $request->only('email')
         );
+
+        $flasher->success("We are sent a password reset mail!");
 
         return $status == Password::RESET_LINK_SENT
                     ? back()->with('status', __($status))

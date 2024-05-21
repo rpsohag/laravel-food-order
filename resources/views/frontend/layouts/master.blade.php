@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>FoodPark || Restaurant Management</title>
     <link rel="icon" type="image/png" href="{{ asset('frontend/images/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/all.min.css') }}">
@@ -28,9 +28,9 @@
             <div class="row">
                 <div class="col-xl-6 col-md-8">
                     <ul class="fp__topbar_info d-flex flex-wrap">
-                        <li><a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i> Unifood@gmail.com</a>
+                        <li><a href="mailto:example@example.com"><i class="fas fa-envelope"></i> example@example.com</a>
                         </li>
-                        <li><a href="callto:123456789"><i class="fas fa-phone-alt"></i> +96487452145214</a></li>
+                        <li><a href="callto:+880 123456789"><i class="fas fa-phone-alt"></i> +880 123456789</a></li>
                     </ul>
                 </div>
                 <div class="col-xl-6 col-md-4 d-none d-md-block">

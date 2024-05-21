@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Flasher\Prime\FlasherInterface;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -27,7 +28,7 @@ class NewPasswordController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, FlasherInterface $flasher)
     {
         $request->validate([
             'token' => ['required'],
@@ -49,6 +50,8 @@ class NewPasswordController extends Controller
                 event(new PasswordReset($user));
             }
         );
+        $flasher->success("Your password is now updated!");
+
 
         // If the password was successfully reset, we will redirect the user back to
         // the application's home authenticated view. If there is an error we can
