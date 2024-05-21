@@ -26,7 +26,7 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2024 <div class="bullet"></div> Design By <a href="https://nauval.in/">RP SOHAG</a>
+          Copyright &copy; 2024 <div class="bullet"></div> Design By <a href="#">RP SOHAG</a>
         </div>
         <div class="footer-right">
           
@@ -42,8 +42,6 @@
   <script src="{{ asset('admin/assets/modules/bootstrap/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('admin/assets/modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
   <script src="{{ asset('admin/assets/js/stisla.js') }}"></script>
-  
-  
   <!-- Template JS File -->
   <script src="{{ asset('admin/assets/js/scripts.js') }}"></script>
   <script src="{{ asset('admin/assets/js/custom.js') }}"></script>
